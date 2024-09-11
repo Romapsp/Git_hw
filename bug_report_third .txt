@@ -9,3 +9,5 @@ Actual Result: "Successfully registered! Please, click Back to return on login p
 Severity: Low
 			
 Oh, Wow!
+Yep
+
