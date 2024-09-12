@@ -1,6 +1,0 @@
-Work with Git
-Automating E2E tests
-Automating Unit tests
-Automating Integration tests
-Integration with Ci/Cd 
-Cucumber + Wdio + Playwright + JS
