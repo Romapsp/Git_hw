@@ -1,10 +1,12 @@
 let minAge = 18
 let maxAge = 60
-let age = Number('60')
+let age = '61'
 
 if (typeof age !== 'number') {
     console.log('Incorrect data type')
 } 
+
+age = Number(age)
 
 if (age < minAge) {
     console.log(`You don't have access cause your age is ` + age + ` It's less then `)
