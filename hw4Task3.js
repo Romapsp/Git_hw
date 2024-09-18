@@ -1,6 +1,6 @@
 let minAge = 18
 let maxAge = 60
-let age = 61
+let age = Number('60')
 
 if (isNaN(age) && age !== '') {
     console.log('Incorrect data type')
