@@ -1,20 +1,27 @@
 
 
 const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
-const myPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses']
+const myPizzas = ['peperoni', 'Caprichosa', 'Diablo', '4 cheeses']
 
 const pizzaResult = []
 
-let allIncludedFlag = true
+for (let i = 0; i < competitorPizzas.length; i++) {
+    competitorPizzas[i] = competitorPizzas[i].toLowerCase()
+}
+
+for (let i = 0; i < myPizzas.length; i++) {
+    myPizzas[i] = myPizzas[i].toLowerCase()
+}
 
 for (const pizza of myPizzas) {
+    pizza.toLowerCase()
     if (!competitorPizzas.includes(pizza)) {
         pizzaResult.push(pizza)
         allIncludedFlag = false
     }
 }
 
-if (allIncludedFlag) {
+if (pizzaResult.length === 0) {
     console.log(null)
 } else {
     console.log(pizzaResult)
