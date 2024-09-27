@@ -16,7 +16,6 @@ for (let i = 0; i < myPizzas.length; i++) {
 for (const pizza of myPizzas) {
     if (!competitorPizzas.includes(pizza)) {
         pizzaResult.push(pizza)
-        allIncludedFlag = false
     }
 }
 
