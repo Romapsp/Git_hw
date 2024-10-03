@@ -27,7 +27,6 @@ console.log(findArray)
 const modifiedArray = [...numberArr]
 const sortArray = modifiedArray.sort((a, b) => a - b)
 console.log(modifiedArray)
-console.log(numberArr)
 // TASK 6 
 const reduceArray = numberArr.reduce((accumulator, value) => {
     return accumulator + value
