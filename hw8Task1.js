@@ -6,17 +6,14 @@ numberArr.forEach((value) => {
     }
 })
 // TASK 2
-const mapArray = numberArr.map((value, index, numberArr) => {
-    return value - numberArr.length
+const mapArray = numberArr.map((value, index, arr) => {
+    return value - arr.length
 })
 
 console.log(mapArray)
 // TASK 3 
 const filterArray = numberArr.filter((value, index, numberArr) => {
-    if (index > 0 && value > numberArr[index - 1]) {
-        return true;
-    }
-    return false;
+    return index > 0 && value > numberArr[index - 1]
 })
 
 console.log(filterArray)
@@ -27,8 +24,10 @@ const findArray = numberArr.find((value, index, numberArr) => {
 
 console.log(findArray)
 // TASK 5 
-const sortArray = numberArr.sort((a, b) => a - b)
-console.log(sortArray)
+const modifiedArray = [...numberArr]
+const sortArray = modifiedArray.sort((a, b) => a - b)
+console.log(modifiedArray)
+console.log(numberArr)
 // TASK 6 
 const reduceArray = numberArr.reduce((accumulator, value) => {
     return accumulator + value
