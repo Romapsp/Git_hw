@@ -1,26 +1,32 @@
+function isPalindrome(word) {
 
-
-const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai']
-const myPizzas = ['peperoni', 'Caprichosa', 'Diablo', '4 cheeses']
-
-const pizzaResult = []
-
-for (let i = 0; i < competitorPizzas.length; i++) {
-    competitorPizzas[i] = competitorPizzas[i].toLowerCase()
+    const normalizedWord = word.toLowerCase();
+    
+    const reversedWord = normalizedWord.split('').reverse().join('');
+    
+    return normalizedWord === reversedWord;
 }
 
-for (let i = 0; i < myPizzas.length; i++) {
-    myPizzas[i] = myPizzas[i].toLowerCase()
-}
+console.log(isPalindrome('madam'))
+console.log(isPalindrome('hello'))
+console.log(isPalindrome('Racecar'))
 
-for (const pizza of myPizzas) {
-    if (!competitorPizzas.includes(pizza)) {
-        pizzaResult.push(pizza)
+function longestWords(sentence) {
+    const words = sentence.split(' ')
+    let maxLength = 0;
+    let longestWords = [];
+
+    for (const word of words) {
+        if (word.length > maxLength) {
+            maxLength = word.length
+            longestWords = [word]
+        } else if (word.length === maxLength) {
+            longestWords.push(word)
+        }
     }
+
+    return longestWords;
 }
 
-if (pizzaResult.length === 0) {
-    console.log(null)
-} else {
-    console.log(pizzaResult)
-}
+console.log(longestWords('I am super engineer and coder'))
+console.log(longestWords('I love coding and programming and depgramming'))
